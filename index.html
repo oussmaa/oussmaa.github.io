@@ -41,6 +41,9 @@
               <!-- New education link -->
             </li>
             <li class="nav__item">
+              <a href="assets/Oussama-Ghariani-ReseumeGH.pdf" class="nav__link">Resume</a>
+            </li>
+            <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
             </li>
           </ul>
@@ -337,7 +340,6 @@
             <span class="education__date">2021 – 2024 | Nabeul, Tunisia</span>
           </div>
 
-       
           <!-- Dashed line for separation -->
 
           <div class="education__data">
@@ -350,7 +352,6 @@
             <span class="education__date">2018 – 2021 | Mahdia, Tunisia</span>
           </div>
 
-    
           <!-- Dashed line for separation -->
 
           <div class="education__data">
@@ -368,34 +369,57 @@
         <h2 class="section-title">Contact</h2>
         <div class="contact__container bd-grid">
           <form id="contact-form" class="contact__form">
-            <input type="text" name="name" placeholder="Name" class="contact__input" required />
-            <input type="email" name="email" placeholder="Email" class="contact__input" required />
-            <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="contact__input"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="contact__input"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              class="contact__input"
+              required
+            ></textarea>
             <input type="submit" value="Send" class="contact__button button" />
           </form>
         </div>
       </section>
-      
+
       <!-- EmailJS SDK -->
-      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script
+        type="text/javascript"
+        src="https://cdn.emailjs.com/dist/email.min.js"
+      ></script>
       <script>
         (function () {
-          emailjs.init('Ss-J4ql6Cm8YoX-p1'); // Replace with your EmailJS user ID
+          emailjs.init("Ss-J4ql6Cm8YoX-p1"); // Replace with your EmailJS user ID
         })();
-        
-        document.getElementById('contact-form').addEventListener('submit', function (e) {
-          e.preventDefault(); // Prevent the default form submission
-      
-          // Send the email using EmailJS
-          emailjs.sendForm('service_g69naul', 'template_ozx6cu8', this)
-          .then(function() {
-              alert('Email sent successfully!'); // Alert on success
-          }, function(error) {
-              alert('Failed to send email. Error: ' + JSON.stringify(error)); // Alert on failure
-          });
-        });
-      </script>
 
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Send the email using EmailJS
+            emailjs.sendForm("service_g69naul", "template_ozx6cu8", this).then(
+              function () {
+                alert("Email sent successfully!"); // Alert on success
+              },
+              function (error) {
+                alert("Failed to send email. Error: " + JSON.stringify(error)); // Alert on failure
+              }
+            );
+          });
+      </script>
     </main>
 
     <!--===== FOOTER =====-->
